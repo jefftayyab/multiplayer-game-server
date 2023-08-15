@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agnox Test Server</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="con-heading">
+      <h3>Welcome to Ludo Like Web Socket Implementation</h3>
+      <p>!! Open console for output !!</p>
+      <input type="text" placeholder="Authorization token" id="token" />
+    </div>
+
+    <div class="container">
+      <div class="field">
+        <h4>Create game:</h4>
+        <form onSubmit="createGame(event)">
+          <input type="text" placeholder="Game name" id="cl-game-name" class="input" required />
+          <label for="cl-environment-name">Environment Name</label>
+          <select id="cl-environment-name">
+            <option value="Fantasy">Fantasy</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+          </select>
+          <input type="number" placeholder="Entry fee" id="cl-entry-fee" class="input" required />
+          <input type="number" placeholder="Max players" id="cl-max-players" class="input" required />
+          <input type="number" placeholder="Max players to start" id="cl-max-players-to-start" class="input" required />
+          <input type="text" placeholder="Player name" id="cl-player-name" class="input" required />
+          <label for="cl-country-name">Enter Country</label>
+          <select id="cl-country-name">
+            <option value="Pakistan">Pakistan</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+          </select>
+          <br />
+          <label for="cl-is-private">Is private</label>
+          <input type="checkbox" id="cl-is-private" />
+          <br />
+          <button>Create</button>
+        </form>
+      </div>
+
+      <div class="field">
+        <h4>Join game:</h4>
+        <form onSubmit="joinGame(event)">
+          <input type="text" placeholder="Game ID" id="jl-game-id" class="input" required />
+          <input type="text" placeholder="Player Network ID" id="jl-player-network-id" class="input" required />
+          <input type="text" placeholder="Player name" id="jl-player-name" class="input" required />
+          <label for="jl-country-name">Enter Country</label>
+          <select id="jl-country-name">
+            <option value="Pakistan">Pakistan</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+          </select>
+          <br />
+          <button>Join</button>
+        </form>
+      </div>
+
+      <div class="field">
+        <h4>Player state update test loop:</h4>
+        <form onSubmit="playerStateUpdate(event)">
+          <input type="text" placeholder="Game ID" id="psu-game-id" class="input" required />
+          <input type="text" placeholder="Player Network ID" id="psu-player-network-id" class="input" required />
+          <button>Start</button>
+        </form>
+      </div>
+
+      <div class="field">
+        <h4>Dice state update test loop:</h4>
+        <form onSubmit="diceStateUpdate(event)">
+          <input type="text" placeholder="Game ID" id="dsu-game-id" class="input" required />
+          <button>Start</button>
+        </form>
+      </div>
+
+      <div class="field">
+        <h4>Leave game:</h4>
+        <form onSubmit="leaveGame(event)">
+          <input type="text" placeholder="Game ID" id="lg-game-id" class="input" required />
+          <input type="text" placeholder="Player Network ID" id="lg-player-network-id" class="input" required />
+          <button>Leave</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

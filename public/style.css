@@ -1,0 +1,26 @@
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.con-heading {
+  text-align: center;
+  padding: 6px;
+  border: 1px solid;
+}
+
+.container {
+  padding: 6px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.field {
+  margin: 20px;
+}
+
+.input {
+  display: block;
+  margin-bottom: 5px;
+}
